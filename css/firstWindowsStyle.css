@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+.barraNavegacion {
+  -webkit-app-region: drag;
+  background-color: rgb(26, 23, 23);
+  border-bottom: 2px rgba(255, 255, 255, 0.404) solid;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  height: 36px;
+  width: 100%;
+}
+.contenedorSuperiorIzquierdo {
+  align-items: center;
+  display: flex;
+  margin-left: 3px;
+  width: 10%;
+}
+.logoMedio {
+  display: flex;
+  flex-direction: column;
+  font-family: "Dongle", sans-serif;
+  font-size: 25px;
+  justify-content: center;
+  margin-left: 8px;
+  width: 90%;
+}
+#logoWindowApp {
+  -webkit-app-region: no-drag;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-user-select: none;
+}
+.contenedorSuperiorDerecho {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+  width: 10%;
+}
+.contenedorMinus {
+  align-items: center;
+  -webkit-app-region: no-drag;
+  display: flex;
+  font-size: 30px;
+  font-weight: bolder;
+  height: 95%;
+  justify-content: center;
+  width: 30px;
+}
+.contenedorClose {
+  align-items: center;
+  -webkit-app-region: no-drag;
+  display: flex;
+  font-size: 30px;
+  font-weight: bolder;
+  height: 100%;
+  justify-content: center;
+  width: 30px;
+}
+.subContenedorMinus {
+  align-content: center;
+  align-items: center;
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+  display: flex;
+  height: 6px;
+  width: auto;
+}
+.subContenedorClose {
+  align-content: center;
+  align-items: center;
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+  display: flex;
+  height: auto;
+  width: auto;
+}
+
+.fa-solid {
+  color: rgba(196, 196, 196, 0.788);
+  font-size: 16px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.fa-solid:hover {
+  color: aliceblue;
+}
+.mainContent {
+  align-items: center;
+  -webkit-app-region: drag;
+  background-color: rgb(19, 22, 32);
+  display: flex;
+  height: 95.9%;
+  justify-content: center;
+  width: 100%;
+}
+.containerContent {
+  -webkit-app-region: drag;
+  background-color: rgba(30, 34, 49, 0.048);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  justify-content: center;
+  margin-top: -10px;
+  width: 85%;
+}
+.containerAllTimeToFrames {
+  align-items: center;
+  -webkit-app-region: drag;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contenedorInputsTimeToFrames {
+  -webkit-app-region: no-drag;
+}
+#timeToFramesTitle {
+  color: aliceblue;
+  font-family: "Dongle", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+}
+.texto-input {
+  color: rgb(248, 252, 255);
+  font-family: "Dongle", sans-serif;
+  font-size: 30px;
+  -webkit-user-select: none;
+}
+.convert-time-to-frames-input {
+  background-color: #41465c;
+  border: 2px solid rgb(90, 90, 90);
+  border-radius: 0.25rem;
+  color: rgb(170, 170, 170);
+  margin-left: 6px;
+  margin-right: 6px;
+  outline: none;
+  padding: 2px 3px 2px 3px;
+  width: 40px;
+}
+.convert-time-to-frames-input:focus {
+  background-color: #41465c;
+  -webkit-box-shadow: 0px 0px 6px 1px #41465c;
+  box-shadow: 0px 0px 6px 1px #41465c;
+  color: rgb(170, 170, 170);
+  width: 40px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+/*font-family: 'Dongle', sans-serif;*/
+.containerFrameRate {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.resultado-time-to-frames {
+  align-items: center;
+  display: flex;
+  font-family: "Dongle", sans-serif;
+  font-size: 30px;
+  justify-content: center;
+  width: 100%;
+}
+#tiempo-ingresado {
+  -webkit-app-region: no-drag;
+  color: rgb(42, 165, 93);
+  font-weight: 600;
+  margin-right: 6px;
+}
+#resultado {
+  -webkit-app-region: no-drag;
+  display: none;
+  font-weight: 600;
+}
+.divisor {
+  height: 20px;
+}
+hr {
+  border: 2.5px solid rgba(65, 68, 97, 0.021);
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.containerAllFramesToTime {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+}
+#framesToTimeTitle {
+  color: aliceblue;
+  font-family: "Dongle", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+}
+.convert-frame-to-time-input {
+  -webkit-app-region: no-drag;
+  background-color: #41465c;
+  border: 2px solid rgb(90, 90, 90);
+  border-radius: 0.25rem;
+  color: rgb(170, 170, 170);
+  margin-left: 6px;
+  margin-right: 6px;
+  outline: none;
+  padding: 2px 3px 2px 3px;
+  width: 40px;
+}
+.convert-frame-to-time-input:focus {
+  background-color: #41465c;
+  -webkit-box-shadow: 0px 0px 6px 1px #41465c;
+  box-shadow: 0px 0px 6px 1px #41465c;
+  color: rgb(170, 170, 170);
+  width: 40px;
+}
+.resultado-frame-to-time {
+  align-items: center;
+  display: flex;
+  font-family: "Dongle", sans-serif;
+  font-size: 30px;
+  justify-content: center;
+  width: 100%;
+}
+#frames-ingresados {
+  -webkit-app-region: no-drag;
+  color: rgb(42, 165, 93);
+  font-weight: 600;
+  margin-right: 6px;
+}
+#resultado-frames {
+  -webkit-app-region: no-drag;
+  display: none;
+  font-weight: 600;
+}

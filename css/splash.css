@@ -1,0 +1,85 @@
+body {
+  align-items: center;
+  background-color: rgb(19, 22, 32);
+  background-image: url("background.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.contenedorLogoCarga {
+  align-items: center;
+  animation: logo 5s infinite;
+  animation-delay: calc(2s * var(--i));
+  display: flex;
+  height: 200px;
+  justify-content: center;
+}
+#imgLogoCarga {
+  height: 100px;
+  width: 150px;
+}
+@keyframes logo {
+  0%,
+  40%,
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 50%;
+  }
+  20% {
+    opacity: 20%;
+    transform: translateY(-12px);
+  }
+}
+.tituloSplash {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.center {
+  border: none !important;
+  text-align: center;
+}
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.waviy {
+  align-items: center;
+  display: flex;
+  font-size: 50px;
+  height: 100px;
+  justify-content: center;
+  position: relative;
+}
+.waviy span {
+  animation: waviy 1s infinite;
+  animation-delay: calc(0.1s * var(--i));
+  color: #fff;
+  display: inline-block;
+  font-family: "Alfa Slab One", cursive;
+  position: relative;
+  text-transform: uppercase;
+}
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}

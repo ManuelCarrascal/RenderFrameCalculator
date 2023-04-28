@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Frame Calculator</title>
+    <link rel="stylesheet" href="../css/firstWindowsStyle.css" />
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/dongleFont.css" />
+  </head>
+  <body>
+    <nav class="barraNavegacion">
+      <div class="logoMedio">
+        <p>
+          <a id="logoWindowApp">Frame_Calculator</a>
+        </p>
+      </div>
+      <div class="contenedorSuperiorDerecho">
+        <div class="contenedorMinus">
+          <div class="subContenedorMinus">
+            <i class="fa-solid fa-minus" id="minusApp" onclick=""></i>
+          </div>
+        </div>
+        <div class="contenedorClose">
+          <div class="subContenedorClose">
+            <i class="fa-solid fa-xmark" id="closeApp" title="close"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mainContent">
+      <div class="containerContent">
+        <div class="containerAllTimeToFrames">
+          <div><h1 id="timeToFramesTitle">Time to frames</h1></div>
+          <div class="contenedorInputsTimeToFrames">
+            <span class="texto-input">Hours:</span>
+            <input
+              type="number"
+              min="0"
+              max="99"
+              class="convert-time-to-frames-input"
+              id="hora-time-to-frame"
+              onkeyup="timeToFrame()"
+              value="0"
+              minlength="1"
+            />
+            <span class="texto-input">Minutes:</span>
+            <input
+              type="number"
+              min="0"
+              class="convert-time-to-frames-input"
+              id="minute-time-to-frame"
+              onkeyup="timeToFrame()"
+              value="0"
+              minlength="1"
+            />
+            <span class="texto-input">Seconds:</span>
+            <input
+              type="number"
+              min="0"
+              class="convert-time-to-frames-input"
+              id="second-time-to-frame"
+              onkeyup="timeToFrame()"
+              value="0"
+              minlength="1"
+            />
+            <div class="containerFrameRate">
+              <span class="texto-input">Frame rate:</span>
+              <input
+                type="number"
+                min="0"
+                pattern="^[0-9]+"
+                class="convert-time-to-frames-input"
+                id="frame-rate-time-to-frame"
+                onkeyup="timeToFrame()"
+                value="0"
+                minlength="1"
+              />
+            </div>
+            <div class="resultado-time-to-frames">
+              <p id="tiempo-ingresado"></p>
+              <p id="resultado"></p>
+            </div>
+          </div>
+        </div>
+        <div class="divisor">
+          <hr />
+        </div>
+        <div class="containerAllFramesToTime">
+          <div>
+            <h1 id="framesToTimeTitle">Frames to time</h1>
+          </div>
+          <div class="subcontenedor-subcontenedor-contenido-operaciones">
+            <span class="texto-input">Frames:</span>
+            <input
+              type="number"
+              min="0"
+              max="99"
+              class="convert-frame-to-time-input"
+              id="frame-to-time-frame"
+              onkeyup="frameToTime()"
+              value="0"
+              minlength="1"
+            />
+            <span class="texto-input">Frame rate:</span>
+            <input
+              type="number"
+              min="0"
+              class="convert-frame-to-time-input"
+              id="frame-rate-frame-to-time"
+              onkeyup="frameToTime()"
+              value="0"
+              minlength="1"
+            />
+          </div>
+          <div class="resultado-frame-to-time">
+            <p id="frames-ingresados"></p>
+            <p id="resultado-frames"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/windows.js"></script>
+    <script src="../js/operations.js"></script>
+  </body>
+</html>

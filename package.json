@@ -1,0 +1,51 @@
+{
+  "name": "FrameCalculatorDesktop",
+  "version": "1.0.0",
+  "description": "Frame calculator is a desktop program created in order to facilitate the calculations concerning rendering frames in 3D modeling programs.",
+  "main": "./index.js",
+  "scripts": {
+    "start": "electron index.js",
+    "build": "electron-builder",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "keywords": [],
+  "author": "@ManuelCarrascal",
+  "license": "ISC",
+  "build": {
+    "appId": "frame-calculator",
+    "icon": "icons/icon.ico",
+    "asar": true,
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "icons/icon.ico"
+    }
+  },
+  "dependencies": {
+    "electron": "^17.0.1",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^22.14.13"
+  }
+}
