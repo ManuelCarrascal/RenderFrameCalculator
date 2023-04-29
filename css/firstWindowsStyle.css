@@ -37,6 +37,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   -webkit-user-select: none;
+  user-select: none;
 }
 .contenedorSuperiorDerecho {
   align-items: center;
@@ -95,9 +96,10 @@ body {
 }
 .mainContent {
   align-items: center;
-  -webkit-app-region: drag;
+  -webkit-app-region: no-drag;
   background-color: rgb(19, 22, 32);
   display: flex;
+  flex-direction: column;
   height: 95.9%;
   justify-content: center;
   width: 100%;
@@ -128,12 +130,14 @@ body {
   font-family: "Dongle", sans-serif;
   font-size: 60px;
   font-weight: 700;
+  user-select: none;
 }
 .texto-input {
   color: rgb(248, 252, 255);
   font-family: "Dongle", sans-serif;
   font-size: 30px;
   -webkit-user-select: none;
+  user-select: none;
 }
 .convert-time-to-frames-input {
   background-color: #41465c;
@@ -201,6 +205,7 @@ hr {
   font-family: "Dongle", sans-serif;
   font-size: 60px;
   font-weight: 700;
+  user-select: none;
 }
 .convert-frame-to-time-input {
   -webkit-app-region: no-drag;
@@ -239,4 +244,21 @@ hr {
   -webkit-app-region: no-drag;
   display: none;
   font-weight: 600;
+}
+.circleHelp {
+  align-self: flex-end;
+  background-color: rgba(240, 248, 255, 0.72);
+  border-radius: 50%;
+  display: flex;
+  height: 18px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 15px;
+  place-content: center;
+}
+.circleHelp:hover {
+  -webkit-app-region: no-drag;
+  background-color: rgba(240, 248, 255, 0.816);
+  box-shadow: 0 0 0 0.15rem rgba(240, 248, 255, 0.695) !important;
+  cursor: pointer !important;
 }
